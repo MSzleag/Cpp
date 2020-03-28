@@ -11,7 +11,7 @@ Account::Account(long int id_nr, string passwd, string name, string surname)
 
 }
 
-Account::Account(){}
+Account::Account() {}
 
 long int Account::get_id_nr()
 {
