@@ -61,7 +61,8 @@ int main()
 		c.set_x(distribution(gen));
 		c.set_y(distribution(gen));
 		
-		if (k.is_inside(c)) {
+		if (k.is_inside(c)) 
+		{
 			ni++;
 		}
 	}
