@@ -16,6 +16,7 @@ class CPlansza
 {
     public:
         CPlansza(){
+
             //inicjalizacja planszy
             for(int Wie = 0; Wie < 8; ++Wie){
                 for(int Kol = 0; Kol < 8; ++Kol){
