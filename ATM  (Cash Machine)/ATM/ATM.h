@@ -19,7 +19,7 @@ public:
 	ATM(string &name, string &surname);
 	ATM();
 	
-	void logo();
+	static void logo();
 	
 	string get_name();
 	string get_surname();

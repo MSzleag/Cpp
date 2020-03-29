@@ -133,7 +133,7 @@ void Account::deposit(int& amount)
 
     this->balance += amount;
 
-    for (int i = 0; i < data_vector.size(); i++)
+    for (size_t i = 0; i < data_vector.size(); i++)
     {
         if (data_vector[i] == to_string(this->id_nr))
         {
@@ -151,7 +151,7 @@ void Account::deposit(int& amount)
     }
 
 
-    for (int i = 0; i < data_vector.size(); i++)
+    for (size_t i = 0; i < data_vector.size(); i++)
     {
         data << data_vector[i] << endl;
     }
@@ -197,7 +197,7 @@ void Account::transfer(long int& id_nr, int& amount)
         data.close();
 
 
-        for (int i = 0; i < data_vector.size(); i++)
+        for (size_t i = 0; i < data_vector.size(); i++)
         {
             if (data_vector[i] == to_string(id_nr))
             {
@@ -216,7 +216,7 @@ void Account::transfer(long int& id_nr, int& amount)
         }
 
 
-        for (int i = 0; i < data_vector.size(); i++)
+        for (size_t i = 0; i < data_vector.size(); i++)
         {
             data << data_vector[i] << endl;
         }
@@ -251,7 +251,7 @@ void Account::change_passwd(string& passwd)
     data.close();
 
 
-    for (int i = 0; i < data_vector.size(); i++)
+    for (size_t i = 0; i < data_vector.size(); i++)
     {
         if (data_vector[i] == to_string(id_nr))
         {
@@ -269,12 +269,12 @@ void Account::change_passwd(string& passwd)
     }
 
 
-    for (int i = 0; i < data_vector.size(); i++)
+    for (size_t i = 0; i < data_vector.size(); i++)
     {
         data << data_vector[i] << endl;
     }
-    this->passwd = passwd;
     data.close();
+    this->passwd = passwd;
 }
 
 void Account::change_pin(int& card_id)
@@ -299,7 +299,7 @@ void Account::change_pin(int& card_id)
     data.close();
 
 
-    for (int i = 0; i < data_vector.size(); i++)
+    for (size_t i = 0; i < data_vector.size(); i++)
     {
         if (data_vector[i] == to_string(id_nr))
         {
@@ -317,7 +317,7 @@ void Account::change_pin(int& card_id)
     }
 
 
-    for (int i = 0; i < data_vector.size(); i++)
+    for (size_t i = 0; i < data_vector.size(); i++)
     {
         data << data_vector[i] << endl;
     }

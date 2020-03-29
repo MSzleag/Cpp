@@ -9,8 +9,8 @@ int main()
 	{
 		system("cls");
 
-		Account start;
-		start.logo();
+		
+		ATM::logo();
 
 		cout << "                                       Click your chosen option" << endl;
 		cout << "                                              1.SIGN IN" << endl;
@@ -34,27 +34,27 @@ int main()
 				{
 					system("cls");
 
-					start.logo();
-
+					ATM::logo();
+					Account log_in;
 					cout << "                                    Enter your ID Number" << endl;
 					cin >> id_new;
 
 					cout << "                                    Enter your Password" << endl;
 					cin >> passwd;
 				
-					if (start.sign_in(id_new, passwd) == false)
+					if (log_in.sign_in(id_new, passwd) == false)
 					{
 						cout << "Wrong ID Number or Password Try Again";
 						system("pause");
 					}
 					else
 					{
-						Account logged(id_new, passwd, start.search_in_data(1, id_new), start.search_in_data(2, id_new));
+						Account logged(id_new, passwd, log_in.search_in_data(1, id_new), log_in.search_in_data(2, id_new));
 						while (1)
 						{
 							system("cls");
 
-							start.logo();
+							ATM::logo();
 							cout << "                                       Welcome " << logged.get_name() << " " << logged.get_surname() << endl;
 							cout << "                                       Click your chosen option" << endl;
 							cout << "                                              1.Withdraw Money" << endl;
@@ -247,7 +247,7 @@ int main()
 		case '2':
 		{
 			system("cls");
-			start.logo();
+			ATM::logo();
 			string name, surname;
 			
 			cout << "                                      EXIT TO GO BACK " << endl;
